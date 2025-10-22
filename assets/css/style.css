@@ -42,7 +42,7 @@ header {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    padding: 10px 6%;
+    padding: 10px 20%;
 }
 
 .header-title {
@@ -54,7 +54,7 @@ header {
 }
 
 .mini-header {
-    background-color: #8d8587;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     gap: 10rem;
@@ -70,7 +70,43 @@ header {
 
 /* MAIN */
 
+.hero {
+  position: relative;
+  height: 780px;
+  background-image: url('/assets/img/corrective-glasses-reading-desk-female-silhouette-background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; 
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
 
 /* FOOTER */
 
