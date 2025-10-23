@@ -53,6 +53,11 @@ header {
     font-style: normal;
 }
 
+.midias {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .mini-header {
     background-color: #FFFFFF;
     display: flex;
@@ -63,50 +68,121 @@ header {
     font-size: 18px;
 }
 
-.midias {
-    display: flex;
-    gap: 0.5rem;
+/* Quando a tela for menor que 768px (mobile) */
+@media (max-width: 768px) {
+    .mini-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+    }
 }
+
 
 /* MAIN */
 
 .hero {
-  position: relative;
-  height: 780px;
-  background-image: url('/assets/img/corrective-glasses-reading-desk-female-silhouette-background.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  overflow: hidden;
+    position: relative;
+    height: 780px;
+    background-image: url('/assets/img/corrective-glasses-reading-desk-female-silhouette-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.45); 
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1; 
-  max-width: 800px;
-  padding: 20px;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
+
+.sobre {
+  background-color: #d3c0c0; /* cor de fundo leve */
+  padding: 60px 20px;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto; /* centraliza no meio da tela */
+}
+
+.info-section img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.info-section .info-content {
+  max-width: 600px;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsivo — mobile */
+@media (max-width: 768px) {
+  .info-section {
+    flex-direction: column; /* empilha tudo */
+    text-align: center;
+  }
+
+  .info-section img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .info-section .info-content {
+    max-width: 90%;
+  }
+
+  .info-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .info-section p {
+    font-size: 1rem;
+  }
+}
+
 
 /* FOOTER */
 
@@ -120,8 +196,8 @@ footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-bottom: 1%;
 }
 
@@ -129,6 +205,6 @@ footer {
     font-size: 12px;
 }
 
-.Footer-Zenix-Text{
+.Footer-Zenix-Text {
     text-decoration: none;
 }
